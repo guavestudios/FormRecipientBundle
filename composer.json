@@ -1,16 +1,17 @@
 {
-	"name": "guave/contaoskeleton-bundle",
-	"description": "Skeleton for custom Contao 4 bundles",
+	"name": "guave/formrecipient-bundle",
+	"description": "Adds the function to take the email recipient from a form field",
 	"license": "ISC",
 	"type": "contao-bundle",
 	"homepage": "https://www.guaveinteractive.ch",
 	"support": {
-		"issues": "https://github.com/guavestudios/contaoskeleton-bundle/issues",
-		"source": "https://github.com/guavestudios/contaoskeleton-bundle"
+		"issues": "https://github.com/guavestudios/formrecipientbundle/issues",
+		"source": "https://github.com/guavestudios/formrecipientbundle"
 	},
 	"require": {
 		"php": "^7.4 || ^8.0",
 		"contao/core-bundle": "^4.13",
+		"christianbarkowsky/contao-protectedselect": "^1.3",
 		"symfony/config": "^5.4",
 		"symfony/dependency-injection": "^5.4",
 		"symfony/http-kernel": "^5.4"
@@ -27,7 +28,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Guave\\ContaoSkeletonBundle\\": "src/"
+			"Guave\\FormRecipientBundle\\": "src/"
 		},
 		"classmap": [
 			"contao/"
@@ -41,7 +42,7 @@
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"Guave\\ContaoSkeletonBundle\\Tests\\": "tests/"
+			"Guave\\FormRecipientBundle\\Tests\\": "tests/"
 		}
 	},
 	"config": {
@@ -55,9 +56,10 @@
 	"extra": {
 		"bamarni-bin": {
 			"bin-links": false,
+			"forward-command": true,
 			"target-directory": "tools"
 		},
-		"contao-manager-plugin": "Guave\\ContaoSkeletonBundle\\ContaoManager\\Plugin"
+		"contao-manager-plugin": "Guave\\FormRecipientBundle\\ContaoManager\\Plugin"
 	},
 	"scripts": {
 		"all": [

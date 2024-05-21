@@ -1,6 +1,6 @@
-# Contao Skeleton Bundle
+# Contao Form Recipient
 
-This contao module is a template for building our own.
+This bundle allows you to set the recipient of a form dynamically, based on a form field.
 
 ## Requirements
 
@@ -9,16 +9,12 @@ This contao module is a template for building our own.
 
 ## Install
 
-!!! example installation !!!
-
 ```BASH
-$ composer require guave/contaoskeleton-bundle
+$ composer require guave/formrecipient-bundle
 ```
 
 ## Usage
 
-Add some small sample text of how it's meant to be activated and used, e.g. in `contao/config/config.php`
-
-```PHP
-$GLOBALS['TL_SKELETON'] = true;
-```
+- Add a form field of type "Protected Select Menu"
+- Add your recipient emails as the value and a name of your choice as the label and reference
+- Set the form recipient as `{{form::name}}` where name is the field name of your "Protected Select Menu"

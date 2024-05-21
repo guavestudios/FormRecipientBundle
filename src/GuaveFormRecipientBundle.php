@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Guave\ContaoSkeletonBundle;
+namespace Guave\FormRecipientBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class GuaveContaoSkeletonBundle extends Bundle
+class GuaveFormRecipientBundle extends Bundle
 {
     public function getPath(): string
     {
