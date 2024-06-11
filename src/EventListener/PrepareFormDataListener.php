@@ -17,6 +17,10 @@ class PrepareFormDataListener
      */
     public function __invoke(array &$submittedData, array $labels, array $fields, Form $form): void
     {
+        if (!str_starts_with('{{form::', $form->recipient)) {
+            return;
+        }
+
         $form->recipient = System::getContainer()->get('contao.insert_tag.parser')->replaceInline(
             str_replace(
                 array_map(
