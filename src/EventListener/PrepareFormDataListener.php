@@ -17,7 +17,7 @@ class PrepareFormDataListener
      */
     public function __invoke(array &$submittedData, array $labels, array $fields, Form $form): void
     {
-        if (!str_starts_with('{{form::', $form->recipient)) {
+        if (!str_contains($form->recipient, '{{form::')) {
             return;
         }
 
