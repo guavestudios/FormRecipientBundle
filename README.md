@@ -4,8 +4,8 @@ This bundle allows you to set the recipient of a form dynamically, based on a fo
 
 ## Requirements
 
-- Contao 4.13+
-- PHP 7.4 or 8.0+
+- Contao 5.0+
+- PHP 8.1+
 
 ## Install
 
